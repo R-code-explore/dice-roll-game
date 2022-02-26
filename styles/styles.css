@@ -32,7 +32,7 @@ body {
 }
 
 .active {
-  background-color: #ececec;
+  background-color: #f3f3f3;
 }
 
 .panel_joueur_1,
@@ -53,11 +53,137 @@ body {
   font-weight: 90;
 }
 
+.active .nom_joueur {
+  font-weight: 280;
+}
+
+.active .nom_joueur::after {
+  content: "\2022";
+  font-size: 45px;
+  position: absolute;
+  color: red;
+  top: -7px;
+  right: 5px;
+}
+
 .score_joueur {
   color: red;
   margin-bottom: 120px;
   text-align: center;
   font-size: 80px;
   font-weight: 100;
+}
+
+.joueur_actuel_box {
+  background-color: #ff5151;
+  color: white;
+  width: 40%;
+  margin: 0 auto;
+  padding: 12px;
+  text-align: center;
+}
+
+.joueur_actuel_label {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-size: 12px;
+  color: #2b2b2b;
+}
+
+.joueur_actuel_score {
+  font-size: 30px;
+}
+
+button {
+  position: absolute;
+  width: 200px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: #555;
+  background: none;
+  border: none;
+  font-family: Lato;
+  font-size: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 300;
+  -webkit-transition: background-color 0.4s, color 0.3s;
+  transition: background-color 0.4s, color 0.3s;
+}
+
+button:hover {
+  font-weight: 600;
+}
+
+button:hover i {
+  margin-right: 20px;
+}
+
+button:focus {
+  outline: none;
+}
+
+.btn_new {
+  top: 45px;
+}
+
+.btn_new::before {
+  content: "\2B";
+  font-size: 25px;
+  color: red;
+}
+
+.btn_roll::before {
+  content: "\21BB";
+  font-size: 35px;
+  color: red;
+}
+
+.btn_roll {
+  top: 403px;
+}
+
+.btn_hold::before {
+  content: "\2611";
+  font-size: 35px;
+  color: red;
+}
+
+.btn_hold {
+  top: 467px;
+}
+
+i {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 32px;
+  line-height: 1;
+  vertical-align: text-top;
+  margin-top: -4px;
+  -webkit-transition: margin 0.3s;
+  transition: margin 0.3s;
+  color: #eb4d4d;
+}
+
+.de {
+  position: absolute;
+  left: 50%;
+  top: 178px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 100px;
+  -webkit-box-shadow: 0px 8px 60px rgba(0, 0, 0, 0.123);
+          box-shadow: 0px 8px 60px rgba(0, 0, 0, 0.123);
+}
+
+.win {
+  background-color: white;
+}
+
+.win .nom_joueur {
+  font-weight: 300;
+  color: #eb4d4d;
 }
 /*# sourceMappingURL=styles.css.map */
