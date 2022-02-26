@@ -1,0 +1,27 @@
+// sources:
+// Pour les dégradés: cssgradient.io
+// Pour les fonts: GoogleFonts
+
+body{
+    margin: 0;
+}
+
+#joueur1 {
+    font-size: 2rem;
+    padding: 10px 10px;
+    margin: 30px;
+    width: 150px;
+    border-radius: 4%;
+    color:white;
+    background-color: red;
+}
+
+.score1{
+    width: 150px;
+    padding: 10px;
+    margin: 30px;
+    font-size: 1.5rem;
+
+    color: black;
+    background-color: aqua;
+}
