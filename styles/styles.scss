@@ -1,27 +1,80 @@
 // sources:
 // Pour les dégradés: cssgradient.io
-// Pour les fonts: GoogleFonts
+// Pour les fonts: GoogleFonts (comme demandé dans l'énoncé
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
 body{
     margin: 0;
+    background-image: linear-gradient(
+      rgba(62, 20, 20, 0.4),
+      rgba(62, 20, 20, 0.4)
+    ),
+    url(back.jpg);
+    background-size: cover;
+    background-position: center;
+    
+    //Définition de la font globale de la page
+    font-family: Lato;
+    font-weight: 400;
+    
+    position: relative;
+    height: 100vh;
+    color: #555;
 }
 
-#joueur1 {
-    font-size: 2rem;
-    padding: 10px 10px;
-    margin: 30px;
-    width: 150px;
-    border-radius: 4%;
-    color:white;
-    background-color: red;
+.container{
+    width:1000px;
+
+    //centrage conteneur
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    
+    //coloris et ombres
+    background-color: white;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.4);
+
+    //fixation dans le bloc
+    overflow: hidden;
 }
 
-.score1{
-    width: 150px;
-    padding: 10px;
-    margin: 30px;
-    font-size: 1.5rem;
-
-    color: black;
-    background-color: aqua;
+.float-clear::after{
+    content: "";
+    display: table;
+    clear: both;
 }
+
+//paramétrage placement & stylisation joueurs
+.active {
+    background-color: #ececec;
+  }
+
+.panel_joueur_1,
+.panel_joueur_2 {
+  width: 50%;
+  float: left;
+  height: 600px;
+  padding: 100px;
+}
+
+.nom_joueur {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    position: relative;
+    
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: 90;
+}
+
+.score_joueur {
+    color: red;
+    margin-bottom: 120px;
+
+    text-align: center;
+    font-size: 80px;
+    font-weight: 100;
+  }

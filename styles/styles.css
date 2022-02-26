@@ -1,23 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
 body {
   margin: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(62, 20, 20, 0.4)), to(rgba(62, 20, 20, 0.4))), url(back.jpg);
+  background-image: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4)), url(back.jpg);
+  background-size: cover;
+  background-position: center;
+  font-family: Lato;
+  font-weight: 400;
+  position: relative;
+  height: 100vh;
+  color: #555;
 }
 
-#joueur1 {
-  font-size: 2rem;
-  padding: 10px 10px;
-  margin: 30px;
-  width: 150px;
-  border-radius: 4%;
-  color: white;
-  background-color: red;
+.container {
+  width: 1000px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: white;
+  -webkit-box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
 }
 
-.score1 {
-  width: 150px;
-  padding: 10px;
-  margin: 30px;
-  font-size: 1.5rem;
-  color: black;
-  background-color: aqua;
+.float-clear::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.active {
+  background-color: #ececec;
+}
+
+.panel_joueur_1,
+.panel_joueur_2 {
+  width: 50%;
+  float: left;
+  height: 600px;
+  padding: 100px;
+}
+
+.nom_joueur {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  position: relative;
+  font-size: 40px;
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: 90;
+}
+
+.score_joueur {
+  color: red;
+  margin-bottom: 120px;
+  text-align: center;
+  font-size: 80px;
+  font-weight: 100;
 }
 /*# sourceMappingURL=styles.css.map */
