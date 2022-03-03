@@ -1,75 +1,70 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-
-    <!--origin author & description-->
-
-    <meta name="author" content="Eduard Raimond Ciupercher">
-    <meta name="description" content="Dice roll game, jeux de dé avec des rounds, projet école">
-
-    <!---->
-
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--styles-->
+    <meta name="author" content="Eduard Raimond C. (R-code-explore on github)">
+    <meta name="description" content="Jeu de dé 2 joueurs. Jeu demandé comme projet d'école. Jeu inspiré d'un jeu existant déjà sous le nom aproximatif de 'Pig dice game' ayant était créer par 'Maths Week' visible ici 'https://www.mathsweek.ie/2020/pig-dice-game/' . ">
 
-    <!--Bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"crossorigin="anonymous">
+    <!--Icone de rechargement, attribuée au bouton "roll dice"-->
+    <link href='https://css.gg/redo.css' rel='stylesheet'>
+    <!--Icone pour le bouton "hold"-->
+    <link href='https://css.gg/arrow-down-r.css' rel='stylesheet'>
+    <!--Icone pour le bouton "new game"-->
+    <link href='https://css.gg/math-plus.css' rel='stylesheet'>
 
-    <!--My own styles-->
-    <link rel="stylesheet" href="styles/styles.css">
-    <!---->
-    <title>Dice_roll_game</title>
-</head>
-<body>
+    <link type="text/css" rel="stylesheet" href="styles.css" />
 
-    <div class="container float-clear">
-        <!--classe "active" utilisé pour pouvoir actionné dessus en css et éventuellement javascript-->
+    <title>Dice-Roll-</title>
+  </head>
 
-        <!--Joueur 1-->
-        <div class="panel_joueur_1 active">
-            
-            <div class="nom_joueur" id="nom_1">JOUEUR 1</div>
-            <div class="score_joueur" id="score_1">00</div>
-            
-            <div class="joueur_actuel_box">
-                <div class="joueur_actuel_label">Current</div>
-                <div class="joueur_actuel_score" id="actuel_1">00</div>
+  <body>
+
+    <!--Div principale 'wrapper' contenant les cases des deux joueurs-->
+    <div class="wrapper">
+
+        <!--Panel joueur 1 (Défini sous le 0 pour une interpreation javascript plus adéquat)-->
+        <!--Une classe a était également défini par défaut pour pouvoir ensuite la déplacé/ la switcher de panel selon le joueur actuellement actif-->
+        <div class="player-0-panel active">
+
+            <div class="player-name" id="name-0">Joueur 1</div>
+            <div class="player-score" id="score-0">00</div>
+            <div class="player-current-box">
+                <div class="player-current-label">Current</div>
+                <div class="player-current-score" id="actual-0">00</div>
+            </div>
+      
+        </div>
+
+        <!--Panel joueur 2-->
+        <div class="player-1-panel">
+        
+            <div class="player-name" id="name-1">Joueur 2</div>
+            <div class="player-score" id="score-1">00</div>
+            <div class="player-current-box">
+                    <div class="player-current-label">Current</div>
+                    <div class="player-current-score" id="actual-1">00</div>
             </div>
         
         </div>
 
-        <!--Joueur 2-->
-        <div class="panel_joueur_2">
-            
-            <div class="nom_joueur" id="nom_2">JOUEUR 2</div>
-            <div class="score_joueur" id="score_2">00</div>
-            
-            <div class="joueur_actuel_box">
-                <div class="joueur_actuel_label">Current</div>
-                <div class="joueur_actuel_score" id="actuel_2">00</div>
-            </div>
+        <!--Partie de différents éléments actionnants en dehors des panels joueurs-->
+        <button class="btn-new"><i class="gg-math-plus"></i>New game</button>
         
-        </div>
-
-        <!--Actionneurs de commandes (boutons)-->
-        <button class="btn_new">
-            <i class="btn_new_plus_outline"></i>New Game
-        </button>
-
-        <button class="btn_roll"><i class="loop"></i>Roll dice</button>
         
-        <button class="btn_hold">
-            <i class="download_outline"></i>Hold
-        </button>
+        <button class="btn-roll"><i class="gg-redo"></i>Roll dice</button>
+        
+        <button class="btn-hold"><i class="gg-arrow-down-r"></i>Hold</button>
+        
 
-        <img src="assets/dice-6.png" class="de">
+        <img src="assets/dice-5.png" class="dice"/>
     
     </div>
 
     <script src="main.js"></script>
-    <noscript>Javascript inactif sur votre navigateur</noscript>
+    <noscript>javascript inactif sur votre navigateur</noscript>
+
 </body>
 </html>
