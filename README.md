@@ -1,6 +1,8 @@
 # Dice_Roll_Game
 Dice Roll Game (school project)
 
+Link: https://dice-c.netlify.app/
+
 En: 
 Rules:
 The game includes 2 players on a single screen.
